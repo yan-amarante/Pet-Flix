@@ -1,11 +1,14 @@
+import { Outlet } from 'react-router-dom'
+import NavBar from './Components/NavBar'
 import './App.css'
 
 function App() {
 
   return (
-    <>
-      <h1>Petflix</h1>
-    </>
+    <section className='container'>
+    <NavBar/>
+    <Outlet/>
+    </section>
   )
 }
 

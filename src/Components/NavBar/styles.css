@@ -1,0 +1,15 @@
+.container-nav{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 5%;
+    align-items: center;
+}
+.home-icon{
+    margin: auto 0;
+    width: 50%;
+}
+.logo-icon{
+    width: 50%;
+    margin-top: 0.5rem;
+}
