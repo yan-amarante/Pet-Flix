@@ -29,7 +29,7 @@ function Home() {
                 <ul className="lista-videos">
                     {videos.map((video) => {
                         return <li key={video.id}>
-                            <Link to={`/videoPlayer/${video.id}`}>
+                            <Link className="link-video" to={`/videoPlayer/${video.id}`}>
                                 <img className="thumbnail" src={video.thumbnail} />
                                 <h2 className="titulo-video">{video.titulo}</h2>
                             </Link>
