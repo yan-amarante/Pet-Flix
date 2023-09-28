@@ -5,6 +5,8 @@ describe('testar funcionalidades basicas do petflix', () => {
     cy.get('.hero-botao').click()
     cy.url().should('include', '/videoPlayer/1')
     cy.url().should('eq', 'http://localhost:5173/videoPlayer/1') 
+    cy.wait(3000)
+    cy.screenshot()
   })
 
   it('acessar player de video pelo segundo video disponivel na lista de videos', () => {
@@ -12,6 +14,8 @@ describe('testar funcionalidades basicas do petflix', () => {
     cy.get(':nth-child(2) > a > .thumbnail').click()
     cy.url().should('include', '/videoPlayer/2')
     cy.url().should('eq', 'http://localhost:5173/videoPlayer/2') 
+    cy.wait(3000)
+    cy.screenshot()
   })
 
   it('verificar se o botão home funciona apos selecionar o terceiro video', () => {
@@ -21,6 +25,8 @@ describe('testar funcionalidades basicas do petflix', () => {
     cy.url().should('eq', 'http://localhost:5173/videoPlayer/3') 
     cy.get('.home-icon').click()
     cy.url().should('eq', 'http://localhost:5173/') 
+    cy.wait(3000)
+    cy.screenshot()
   })
 
   it('verificar se o player de video', function () {
@@ -35,5 +41,6 @@ describe('testar funcionalidades basicas do petflix', () => {
       .then(function ($video) {
         $video[0].play()
       })
+      cy.screenshot()
   })
 })
