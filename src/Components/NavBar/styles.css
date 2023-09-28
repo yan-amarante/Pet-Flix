@@ -6,10 +6,13 @@
     align-items: center;
 }
 .home-icon{
-    margin: auto 0;
-    width: 50%;
+    width: 100%;
 }
 .logo-icon{
     width: 50%;
     margin-top: 0.5rem;
+}
+.link-home{
+    margin: auto 0;
+    width: 50%;
 }

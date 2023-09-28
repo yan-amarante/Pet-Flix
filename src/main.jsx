@@ -4,6 +4,7 @@ import App from './App.jsx'
 import Home from './pages/Home/index.jsx'
 import './index.css'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import VideoPlayer from './pages/videoPlayer/index.jsx'
 
 const router = createBrowserRouter(
   [
@@ -15,6 +16,10 @@ const router = createBrowserRouter(
           {
             path: "/",
             element: <Home />
+          },
+          {
+            path: "/videoPlayer/:id",
+            element: <VideoPlayer/>
           }
         ]
     }
