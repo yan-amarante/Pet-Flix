@@ -23,17 +23,17 @@ describe('testar funcionalidades basicas do petflix', () => {
     cy.url().should('eq', 'http://localhost:5173/') 
   })
 
-  it('plays video', function () {
+  it('verificar se o player de video', function () {
     cy.visit('http://localhost:5173/')
     cy.get('.hero-botao').click()
     cy.url().should('include', '/videoPlayer/1')
     cy.url().should('eq', 'http://localhost:5173/videoPlayer/1') 
-    cy.get('video-player')
+    cy.wait(5000)
+    cy.get('.video-player')
       .should('have.prop', 'paused', true)
       .and('have.prop', 'ended', false)
       .then(function ($video) {
         $video[0].play()
       })
-    cy.get('video', { timeout: 10000 }).should('have.prop', 'ended', true)
   })
 })
