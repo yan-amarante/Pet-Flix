@@ -1,6 +1,8 @@
 import { useParams } from "react-router-dom"
 import { useEffect, useState } from "react"
 import "./styles.css"
+import playIcon from "../../assets/playIcon.svg"
+import pauseIcon from "../../assets/pauseIcon.svg"
 
 function VideoPlayer() {
 
@@ -22,12 +24,19 @@ function VideoPlayer() {
 
     return (
         <main className="container-player">
-            {video !== null ?
-            <video className="video-player" controls="controls">
-                <source src={video[0].link} type="video/mp4" />
-                Seu navegador não suporta a reprodução de vídeo.
-            </video> : null
+            <section className="video-container">
+                <section className="controls-container">
+                    <img src={playIcon}/>
+                </section>
+                {video !== null ?
+                <video className="video-player">
+                    <source src={video[0].link} type="video/mp4" />
+                    Seu navegador não suporta a reprodução de vídeo.
+                </video>
+                : null
 }
+            </section>
+
         </main>
     )
 }
